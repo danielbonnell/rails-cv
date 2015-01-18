@@ -1,0 +1,203 @@
+#account {
+  background-color: rgba(0,140,186,0.08);
+  border: 2px solid rgba(0,140,186,0.2);
+  border-radius: 5px;
+}
+
+#admin {
+  background-color: rgba(188, 0, 0, 0.1);
+  border: 2px solid rgba(188, 0, 0, 0.4);
+  border-radius: 5px;
+}
+
+#admin > ul > li > h6 > a,
+#admin > ul > li > h6 > a:hover {
+  color: $grey;
+}
+
+aside {
+  color: $grey;
+}
+
+.avatar {
+  font-size: 16px;
+  height: 9.375em;
+  width: 9.375em;
+  border-radius: 0;
+}
+
+body > div:nth-child(2) > ul > li:not(:last-child) > a:hover {
+  color: $silver;
+}
+
+.cinzel {
+  font-family: $font-family-title;
+  font-size: 0.9em;
+}
+
+.cinzelbold {
+  font-family: $font-family-cinzelbold;
+}
+
+h1, h2, h3, h4,h5, h6 {
+  color: $grey;
+  font-weight: $font-weight-bold;
+  font-family: $font-family-title;
+}
+
+.header-logo {
+  height: 15em;
+  overflow: hidden;
+  vertical-align: bottom;
+  background: $royal-blue;
+  background-image: url("banner.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+}
+
+.header-logo-text {
+  text-indent:-1em;
+  position: relative;
+  top: -0.5em;
+  font-family: $font-family-title;
+  color: #790000;
+  font-size: 5em;
+  font-weight: bold;
+  line-height: 105%;
+  margin: 1em 0 0 1.5em;
+  text-shadow: 0.013em 0em 0em #686868,
+                0em 0.013em 0em #686868,
+                -0.013em 0em 0em #686868,
+                0em -0.013em 0em #686868,
+                0.013em 0.050em 0.063em #aeaeae;
+
+}
+
+#personal-image {
+  margin: 1em;
+}
+
+div .profile-img > img {
+  display: block;
+  margin-left: 0;
+  margin-right: 0;
+  height: 90%;
+  width: 90%;
+  border-radius: 0.3em;
+  border: 2px solid $grey;
+}
+
+div .profile > h3 {
+  margin-left: 0;
+}
+
+div .profile {
+  text-align: justify;
+}
+
+.top-bar-section .has-dropdown {
+  overflow: visible;
+}
+
+@media only screen and (max-width: lower-bound($medium-range)) {
+  @import "navbar";
+
+  article {
+    h3 {
+      font-size: 12px;
+      a {
+        font-size: 12px;
+      }
+    }
+    h6 {
+      font-size: 11px;
+      a {
+        font-size: 11px;
+      }
+    }
+    p {
+      font-size: 10px;
+    }
+  }
+
+
+  aside {
+    .avatar {
+      font-size: 9px;
+    }
+    h5 {
+      font-size: 12px;
+    }
+    ul .side-bar li {
+      font-size: 10px;
+    }
+    div {
+      .panel {
+        font-size: 10px;
+      }
+      h5 {
+        font-size: 11px;
+      }
+      p {
+        font-size: 10px;
+      }
+    }
+  }
+  .breadcrumbs > * {
+    font-size: 0.4em;
+  }
+
+  .header-logo {
+    height: 10em;
+  }
+  .header-logo-text {
+    top: -0.4em;
+    font-size: 3.4em;
+  }
+  .top-bar-section ul li > a,
+  .top-bar-section ul li ul.dropdown li > a,
+  .top-bar-section .dropdown ul li > a,
+  .top-bar-section .dropdown li.parent-link a,
+  .top-bar-section .dropdown li.back h5 a {
+    color: $jet;
+    padding: 0 0 0 0.1em;
+    font-size: 1em;
+  }
+}
+
+.row {
+  background: $royal-blue;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.top-bar {
+  opacity: 0.8;
+  z-index: 10;
+  postion: relative;
+}
+
+// Changes top-bar background color
+.contain-to-grid,
+.top-bar,
+.title-area,
+.top-bar-section ul li,
+.top-bar-section li:not(.has-form) a:not(.button),
+.top-bar-section .dropdown li:not(.has-form) a:not(.button),
+.top-bar-section .has-dropdown > a:after {
+  font-family: $font-family-title;
+}
+
+.top-bar-section .has-dropdown .dropdown li.has-dropdown > a:after {
+  content: "\25ba";
+  font-size: 0.7em;
+}
+
+/* .top-bar-section .has-dropdown > a:after {
+  content: " ";
+} */

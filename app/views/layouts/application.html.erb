@@ -1,22 +1,55 @@
 <!DOCTYPE html>
-<html>
+<html class="no-js" lang="en">
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= content_for?(:title) ? yield(:title) : "Rails Cv" %></title>
-    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Rails Cv" %>">
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
-    <%# Modernizr is required for Zurb Foundation %>
-    <%= javascript_include_tag 'vendor/modernizr' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <%= stylesheet_link_tag 'application', media: 'all' %>
     <%= csrf_meta_tags %>
+    <title>Daniel Bonnell</title>
   </head>
   <body>
-    <header>
-      <%= render 'layouts/navigation' %>
-    </header>
-    <main role="main">
-       <%= render 'layouts/messages' %>
-       <%= yield %>
-    </main>
+    <%= render 'layouts/navigation' %>
+
+    <div class="row">
+      <div class="large-12 medium-12 small-12 columns header-logo">
+        <div class="header-logo-text">Daniel <br />Bonnell</div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="large-12 columns breadcrumbs">
+
+      </div>
+    </div>
+
+    <div class="row collapse">
+      <div class="large-10 large-offset-1 medium-10 medium-offset-1 small-12 columns">
+        <br />
+        <%= render 'layouts/messages' %>
+        <%= yield %>
+      </div>
+    </div>
+
+    <%= javascript_include_tag 'application' %>
+    <%= javascript_tag do %>
+      $(function(){
+      $(document).foundation();
+      });
+    <% end %>
+
+    <footer class="row">
+      <div class="large-12 medium-12 small-12 columns"><hr/>
+        <div class="row">
+          <div class="large-6 medium-6 small-12 columns">
+            <p>© Copyright Daniel Bonnell, All Rights Reserved</p>
+          </div>
+          <div class="large-6 medium-6 small-12 columns">
+            <ul class="inline-list right">
+              <li><a href="/">danielbonnell.io</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

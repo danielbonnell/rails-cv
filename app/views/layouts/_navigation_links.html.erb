@@ -1,2 +1,38 @@
 <%# add navigation links to this file %>
-<li><%= link_to 'About', page_path('about') %></li>
+<li class="has-dropdown">
+  <%= link_to "Projects", "#" %>
+  <ul class="dropdown">
+    <li class="title back js-generated">
+      <h6><a href="javascript:void(0)">Back</a></h6>
+    </li>
+    <li>
+      <%= link_to "The Abh Nation", "http://www.abhnation.com/" %>
+    </li>
+    <li>
+      <%= link_to "The Abh Nation (2.0)", "http://abhnation.herokuapp.com/" %>
+    </li>
+    <li>
+      <%= link_to "Blog: Lacmhacarh", "http://www.lacmhacarh.io/" %>
+    </li>
+  </ul>
+</li>
+<li class="has-dropdown">
+  <%= link_to "CV", "#" %>
+  <ul class="dropdown">
+    <li class="title back js-generated">
+      <h6><a href="javascript:void(0)">Back</a></h6>
+    </li>
+    <li>
+      <%= link_to "LinkedIn", "http://www.linkedin.com/in/danielbonnell" %>
+    </li>
+    <li>
+      <%= link_to "GitHub", "http://github.com/danielbonnell" %>
+    </li>
+    <li>
+      <%= link_to "Résumé (pdf)", "#" %>
+    </li>
+  </ul>
+</li>
+<li>
+  <%= mail_to "daniel.bonnell@gmail.com", "Contact" %>
+</li>
